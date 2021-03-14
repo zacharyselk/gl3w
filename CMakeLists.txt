@@ -36,6 +36,8 @@ message("-------GL3W----------")
 message("SOURCE_DIR: ${SOURCE_DIR}")
 message("CMAKE_BINARY_DIR: ${CMAKE_CURRENT_BINARY_DIR}")
 message("CMAKE_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
+add_custom_command(OUTPUT BEFORE.LOG
+        COMMAND ls ${SOURCE_DIR})
 message("---------------------")
 # add command to create the header and source files
 add_custom_command(
@@ -49,6 +51,8 @@ add_custom_command(
 	WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
 )
 
+add_custom_command(OUTPUT AFTER.LOG
+        COMMAND ls ${SOURCE_DIR})
 # add pseudo target that depends on the generated files
 add_custom_target(
 	gl3w_gen ALL
