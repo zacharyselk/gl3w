@@ -31,6 +31,12 @@ else()
 	# Since CMake 3.8 the IMPORTED targets available
 	set(EXTERNAL_LIBRARIES ${EXTERNAL_LIBRARIES} OpenGL::GL OpenGL::GLU)
 endif()
+
+message("-------GL3W----------")
+message("SOURCE_DIR: ${SOURCE_DIR}")
+message("CMAKE_BINARY_DIR: ${CMAKE_CURRENT_BINARY_DIR}")
+message("CMAKE_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
+message("---------------------")
 # add command to create the header and source files
 add_custom_command(
 	OUTPUT
