@@ -24,13 +24,13 @@ find_package(OpenGL REQUIRED)
 # find python interpreter
 find_package(PythonInterp REQUIRED)
 
-if(CMAKE_VERSION VERSION_LESS 3.8.0)
+#if(CMAKE_VERSION VERSION_LESS 3.8.0)
 	set(EXTERNAL_INCLUDE_DIRS ${EXTERNAL_INCLUDE_DIRS} ${OPENGL_INCLUDE_DIR})
 	set(EXTERNAL_LIBRARIES ${EXTERNAL_LIBRARIES} ${OPENGL_LIBRARIES})
-else()
+#else()
 	# Since CMake 3.8 the IMPORTED targets available
-	set(EXTERNAL_LIBRARIES ${EXTERNAL_LIBRARIES} OpenGL::GL OpenGL::GLU)
-endif()
+#	set(EXTERNAL_LIBRARIES ${EXTERNAL_LIBRARIES} OpenGL::GL OpenGL::GLU)
+#endif()
 
 message("-------GL3W----------")
 message("SOURCE_DIR: ${SOURCE_DIR}")
